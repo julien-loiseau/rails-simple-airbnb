@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>All our flats(<%= @flats.length %>)</h1>
+
+  <div class="container d-flex flex-row justify-content-between mt-3">
+    <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+          <p class="card-text"><%= flat.number_of_guests %></p>
+          <p class="card-text"><%= flat.price_per_night %></p>
+          <a href="#" class="card-link">More info</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
